@@ -1,0 +1,16 @@
+name: Run Python Program
+on: 
+  push: 
+
+jobs:
+  explore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: action/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Python program
+        run: Python hello.py
