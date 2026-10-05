@@ -1,0 +1,16 @@
+name: Explore Repository
+on: 
+  push: 
+
+jobs:
+  explore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Show current directory
+        run: pwd
+      - name: List repository files
+        run: ls -la
+      - name: Show message
+        run: echo "Repository files are available!"
